@@ -5,7 +5,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { GitBranch, Link as LinkIcon, Mail, MessageCircle, Phone } from "lucide-react"
+import { CheckSquare, GitBranch, Link as LinkIcon, Mail, MessageCircle, Phone } from "lucide-react"
 import { Spotlight } from "@/components/ui/spotlight"
 import { ContainerTextFlip } from "@/components/ui/container-text-flip"
 import ProjectsSection from "@/components/ProjectsSection"
@@ -59,19 +59,37 @@ export default function Home() {
               </Button>
             </div>
 
-            <div className="flex items-center gap-4 text-foreground/80">
-              <Link href="#" aria-label="GitHub" className="transition hover:text-foreground">
-                <GitBranch className="h-6 w-6" />
-              </Link>
-              <Link href="#" aria-label="LinkedIn" className="transition hover:text-foreground">
-                <LinkIcon className="h-6 w-6" />
-              </Link>
-              <Link href="#" aria-label="Twitter" className="transition hover:text-foreground">
-                <MessageCircle className="h-6 w-6" />
-              </Link>
+            <div className="flex flex-wrap items-center gap-4">
+              <Button
+                asChild
+                variant="outline"
+                className="min-w-[112px] rounded-xl border-border/60 bg-background/40 backdrop-blur-sm"
+              >
+                <Link href="#" aria-label="GitHub">
+                  GitHub
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="min-w-[112px] rounded-xl border-border/60 bg-background/40 backdrop-blur-sm"
+              >
+                <Link href="#" aria-label="LinkedIn">
+                  LinkedIn
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="min-w-[112px] rounded-xl border-border/60 bg-background/40 backdrop-blur-sm"
+              >
+                <Link href="#" aria-label="Twitter">
+                  Twitter
+                </Link>
+              </Button>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 text-sm text-foreground/80">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-foreground/70">
               <a
                 href="mailto:khalimasuleiman37@gmail.com"
                 className="inline-flex items-center gap-2 transition hover:text-foreground"
@@ -86,6 +104,10 @@ export default function Home() {
                 <Phone className="h-4 w-4" />
                 0756904838
               </a>
+              <span className="inline-flex items-center gap-2 text-emerald-500">
+                <CheckSquare className="h-4 w-4" />
+                open
+              </span>
             </div>
           </div>
 
