@@ -5,7 +5,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { GitBranch, Link as LinkIcon, MessageCircle } from "lucide-react"
+import { GitBranch, Link as LinkIcon, Mail, MessageCircle, Phone } from "lucide-react"
 import { Spotlight } from "@/components/ui/spotlight"
 import { ContainerTextFlip } from "@/components/ui/container-text-flip"
 import ProjectsSection from "@/components/ProjectsSection"
@@ -69,6 +69,23 @@ export default function Home() {
               <Link href="#" aria-label="Twitter" className="transition hover:text-foreground">
                 <MessageCircle className="h-6 w-6" />
               </Link>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4 text-sm text-foreground/80">
+              <a
+                href="mailto:khalimasuleiman37@gmail.com"
+                className="inline-flex items-center gap-2 transition hover:text-foreground"
+              >
+                <Mail className="h-4 w-4" />
+                khalimasuleiman37@gmail.com
+              </a>
+              <a
+                href="tel:0756904838"
+                className="inline-flex items-center gap-2 transition hover:text-foreground"
+              >
+                <Phone className="h-4 w-4" />
+                0756904838
+              </a>
             </div>
           </div>
 
